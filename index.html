@@ -172,6 +172,7 @@
         text-transform: uppercase;
       }
       .hero h1 span { display: block; }
+      .hero h1 > span:nth-child(2) { margin-top: .05em; }
       .hero h1 .name {
         position: relative;
         width: fit-content;
@@ -752,7 +753,7 @@
           <div class="hero-copy">
             <span class="availability"><i class="live-dot"></i> OPEN TO GRADUATE ROLES</span>
             <p class="hello">Hey, I’m</p>
-            <h1><span class="name">Pranit</span><span>Jagtap<span class="handwritten"> builds things ↗</span></span></h1>
+            <h1 aria-label="Pranit Jagtap builds things"><span class="name">Pranit</span><span>Jagtap<span class="handwritten"> builds things ↗</span></span></h1>
             <p class="hero-role">Cloud &amp; DevOps engineer · <span class="role-changing">systems thinker</span><i class="typing-caret" aria-hidden="true"></i></p>
             <p class="hero-description">I build resilient cloud systems, useful AI, and infrastructure that turns complex problems into clear outcomes.</p>
             <div class="hero-actions">
