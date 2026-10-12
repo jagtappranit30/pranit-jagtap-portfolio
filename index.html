@@ -467,6 +467,9 @@
       .terminal-top i:nth-child(2) { background:#ffc845; }.terminal-top i:nth-child(3) { background:var(--lime); }
       .terminal-line { height:5px;margin:7px 0;border-radius:5px;background:rgba(22,217,255,.32); }
       .terminal-line:nth-child(4) { width:63%;background:rgba(184,255,53,.42); }.terminal-line:nth-child(5) { width:78%; }
+      .art-security { background:radial-gradient(ellipse at 50% 105%,#49315f,transparent 63%),linear-gradient(135deg,#17152a,#10131d); }
+      .security-shield { position:absolute;left:calc(50% - 48px);top:30px;width:96px;height:112px;clip-path:polygon(50% 0,92% 16%,84% 65%,50% 100%,16% 65%,8% 16%);border:1px solid rgba(184,255,53,.7);background:linear-gradient(145deg,rgba(184,255,53,.2),rgba(22,217,255,.08));filter:drop-shadow(0 0 22px rgba(184,255,53,.25));animation:shield-pulse 3.5s ease-in-out infinite; }
+      .security-shield::after { position:absolute;inset:25px 32px 28px;content:"";border:2px solid var(--cyan);border-top:0;transform:rotate(45deg); }
       .project-copy { padding:17px 18px 19px; }
       .project-category { color:var(--cyan); font-size:.63rem; font-weight:800; letter-spacing:.13em; text-transform:uppercase; }
       .project-copy h3 { margin:5px 0 5px; font-size:1.16rem; letter-spacing:-.045em; }
@@ -563,6 +566,7 @@
       @keyframes panel-in { from { opacity:0;transform:translateY(8px); } to { opacity:1;transform:translateY(0); } }
       @keyframes ai-float { 0%,100% { transform:rotate(45deg) translateY(0); } 50% { transform:rotate(49deg) translateY(-9px); } }
       @keyframes cube-drift { 0%,100% { translate:0 0;rotate:0deg; } 50% { translate:0 -8px;rotate:5deg; } }
+      @keyframes shield-pulse { 0%,100% { transform:translateY(0) scale(1); } 50% { transform:translateY(-8px) scale(1.04); } }
       @keyframes score-turn { from { rotate:-130deg; } to { rotate:0deg; } }
 
       @media (pointer:fine) {
@@ -813,6 +817,7 @@
                   <a class="dash-project dash-project-link" href="https://github.com/jagtappranit30/productive-point" target="_blank" rel="noreferrer"><div><strong>Productive Point AI</strong><small>Private AI productivity assessment</small></div><span>AI / RAG ↗</span></a>
                   <a class="dash-project dash-project-link" href="https://github.com/jagtappranit30/cwk-soft40051" target="_blank" rel="noreferrer"><div><strong>Distributed File Storage</strong><small>Containerized storage architecture</small></div><span>SYSTEMS ↗</span></a>
                   <a class="dash-project dash-project-link" href="https://github.com/jagtappranit30/soct-cwk" target="_blank" rel="noreferrer"><div><strong>Notts Events</strong><small>Booking and capacity management</small></div><span>WEB APP ↗</span></a>
+                  <a class="dash-project dash-project-link" href="https://github.com/jagtappranit30/Securing-VPC" target="_blank" rel="noreferrer"><div><strong>Network &amp; Cloud Security</strong><small>Secure VPC, subnets, NAT, NACLs and bastion access</small></div><span>SECURITY ↗</span></a>
                 </div>
               </div>
             </div>
@@ -834,6 +839,7 @@
               <button class="filter-button" type="button" data-filter="ai" aria-pressed="false">AI / Research</button>
               <button class="filter-button" type="button" data-filter="systems" aria-pressed="false">Systems</button>
               <button class="filter-button" type="button" data-filter="web" aria-pressed="false">Web</button>
+              <button class="filter-button" type="button" data-filter="security" aria-pressed="false">Security</button>
             </div>
           </div>
           <div class="projects-grid stagger">
@@ -852,6 +858,10 @@
             <a class="project-card" data-category="systems" href="https://github.com/jagtappranit30/pranit-jagtap-portfolio" target="_blank" rel="noreferrer" aria-label="Open cloud-native portfolio GitHub repository">
               <div class="project-art art-terminal" aria-hidden="true"><div class="terminal-card"><div class="terminal-top"><i></i><i></i><i></i></div><div class="terminal-line"></div><div class="terminal-line"></div><div class="terminal-line"></div><div class="terminal-line"></div></div></div>
               <div class="project-copy"><span class="project-category">Cloud · Infrastructure</span><h3>Cloud-native foundations</h3><p>Practical infrastructure patterns focused on reliability, deployment, and clear operations.</p><div class="project-footer"><span>Linux · Docker · CI/CD</span><span class="arrow">↗</span></div></div>
+            </a>
+            <a class="project-card" data-category="security" href="https://github.com/jagtappranit30/Securing-VPC" target="_blank" rel="noreferrer" aria-label="Open Network and Cloud Security GitHub repository">
+              <div class="project-art art-security" aria-hidden="true"><div class="security-shield"></div></div>
+              <div class="project-copy"><span class="project-category">Network · Cloud security</span><h3>Network &amp; Cloud Security</h3><p>Secure AWS VPC design with public and private subnets, NAT, NACLs, security groups, and bastion access.</p><div class="project-footer"><span>AWS · VPC · SSH</span><span class="arrow">↗</span></div></div>
             </a>
           </div>
         </div>
