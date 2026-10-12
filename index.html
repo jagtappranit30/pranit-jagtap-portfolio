@@ -165,17 +165,17 @@
       .hero h1 {
         max-width: 650px;
         margin: 0;
-        font-size: clamp(3.4rem, 6.8vw, 5.2rem);
-        line-height: .9;
-        letter-spacing: -.09em;
+        font-size: clamp(4.7rem, 10vw, 8.4rem);
+        line-height: .84;
+        letter-spacing: -.105em;
         font-weight: 950;
         text-transform: uppercase;
       }
       .hero h1 span { display: block; }
+      .hero h1 > span:nth-child(2) { margin-top: .16em; }
       .hero h1 .name {
         position: relative;
         width: fit-content;
-        white-space: nowrap;
         color: var(--text);
         text-shadow: 0 8px 40px rgba(22,217,255,.06);
       }
@@ -195,12 +195,11 @@
       .handwritten {
         display: inline-block;
         color: var(--cyan);
-        font-family: inherit;
-        font-size: .34em;
-        font-weight: 900;
-        letter-spacing: -.04em;
-        white-space: nowrap;
-        transform: rotate(-3deg) translateY(-.2em);
+        font-family: "Comic Sans MS", "Bradley Hand", cursive;
+        font-size: .4em;
+        font-weight: 800;
+        letter-spacing: -.05em;
+        transform: rotate(-7deg);
       }
       .hero-role { max-width: 520px; margin: 29px 0 0; font-size: clamp(1.15rem,2.4vw,1.6rem); line-height:1.22; }
       .role-changing { color: var(--lime); }
@@ -587,7 +586,7 @@
       @media (max-width: 900px) {
         .hero { min-height:0; }
         .hero-grid { grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);gap:18px; }
-        .hero h1 { font-size:clamp(3.5rem,6.2vw,4.4rem); }
+        .hero h1 { font-size:clamp(4rem,9.3vw,6.7rem); }
         .hero-visual { min-height:390px; }
         .note-one { left:-8px; }.note-two { right:-8px; }
         .projects-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
@@ -618,7 +617,7 @@
         .hero { padding:52px 0 38px; }
         .hero-grid { grid-template-columns:1fr;gap:12px; }
         .hero-copy { padding-bottom:0; }
-        .hero h1 { font-size:clamp(3.1rem,10.5vw,4.5rem); }
+        .hero h1 { font-size:clamp(4.2rem,13vw,7.2rem); }
         .hero-visual { min-height:clamp(370px,65vw,480px);max-width:540px;width:100%;margin:0 auto; }
         .portrait-frame { width:min(70%,370px); }
         .note-one { top:12%;left:3%; }.note-two { top:29%;right:2%; }.note-three { bottom:8%;left:3%; }
@@ -637,7 +636,7 @@
       @media (max-width: 680px) {
         .wrap { width:min(100% - 34px, 540px); }
         .hero { padding:46px 0 30px; }
-        .hero h1 { font-size:clamp(2.8rem,11.5vw,4rem); }
+        .hero h1 { font-size:clamp(4rem,18vw,7.2rem); }
         .hero-visual { min-height:clamp(340px,95vw,410px);max-width:490px; }
         .portrait-frame { width:min(72%,330px); }
         .note-one { top:13%;left:0; }.note-two { top:27%;right:0; }.note-three { bottom:8%;left:1%; }
@@ -674,7 +673,7 @@
       }
       @media (max-width: 390px) {
         .wrap { width:calc(100% - 28px); }
-        .hero h1 { font-size:clamp(2.5rem,11.5vw,3.2rem); }
+        .hero h1 { font-size:clamp(3.45rem,17.8vw,4.4rem); }
         .hero-visual { min-height:350px; }
         .hero-tags { gap:6px;font-size:.68rem; }
         .hero-tags span { padding:5px 7px; }
@@ -698,7 +697,7 @@
         .social-links { gap:11px; }
       }
       @media (max-width: 350px) {
-        .hero h1 { font-size:11vw; }
+        .hero h1 { font-size:17vw; }
         .hero-visual { min-height:320px; }
         .float-note { gap:6px;padding:7px 8px; }
         .float-note strong { font-size:.69rem; }
@@ -754,7 +753,7 @@
           <div class="hero-copy">
             <span class="availability"><i class="live-dot"></i> OPEN TO GRADUATE ROLES</span>
             <p class="hello">Hey, I’m</p>
-            <h1 aria-label="Pranit Jagtap builds things"><span class="name">Pranit&nbsp;Jagtap</span><span class="handwritten"> builds things ↗</span></h1>
+            <h1 aria-label="Pranit Jagtap builds things"><span class="name">Pranit</span><span>Jagtap<span class="handwritten"> builds things ↗</span></span></h1>
             <p class="hero-role">Cloud &amp; DevOps engineer · <span class="role-changing">systems thinker</span><i class="typing-caret" aria-hidden="true"></i></p>
             <p class="hero-description">I build resilient cloud systems, useful AI, and infrastructure that turns complex problems into clear outcomes.</p>
             <div class="hero-actions">
