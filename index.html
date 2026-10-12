@@ -418,6 +418,7 @@
       .dash-project-list { display:grid; gap:9px; margin-top:22px; }
       .dash-project { display:flex; align-items:center; justify-content:space-between; gap:14px; padding:12px 14px; border:1px solid rgba(217,226,250,.08); border-radius:14px; background:rgba(255,255,255,.025); transition:transform .2s ease,border-color .2s ease; }
       .dash-project:hover { transform:translateX(4px); border-color:rgba(184,255,53,.3); }
+      .dash-project-link { display:flex; color:inherit; text-decoration:none; }
       .dash-project strong { display:block; font-size:.84rem; }
       .dash-project small { color:var(--muted); font-size:.72rem; }
       .dash-project span { color:var(--lime); font-size:.68rem; white-space:nowrap; }
@@ -431,6 +432,8 @@
       .projects-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; }
       .project-card {
         position:relative;
+        display:block;
+        color:inherit;
         min-height:332px;
         overflow:hidden;
         border:1px solid rgba(220,229,255,.12);
@@ -440,6 +443,7 @@
         transition:transform .35s var(--ease),border-color .25s ease,box-shadow .3s ease,opacity .25s ease;
       }
       .project-card:hover { border-color:rgba(22,217,255,.44); box-shadow:0 20px 50px rgba(0,0,0,.3); }
+      .project-card:focus-visible { outline:2px solid var(--lime); outline-offset:4px; }
       .project-card.is-filtered { display:none; }
       .project-art { position:relative; height:180px; overflow:hidden; border-bottom:1px solid rgba(224,234,255,.1); }
       .project-art::before,.project-art::after { position:absolute; content:""; }
@@ -806,9 +810,9 @@
               <div class="dash-panel" id="dash-panel-projects" role="tabpanel" aria-labelledby="dash-tab-projects" hidden>
                 <div class="dash-topline"><div><h3>Selected builds</h3><p>Research, distributed systems, and product engineering.</p></div><span class="dash-live"><i class="live-dot"></i> PROJECTS</span></div>
                 <div class="dash-project-list">
-                  <div class="dash-project"><div><strong>Productive Point AI</strong><small>Private AI productivity assessment</small></div><span>AI / RAG</span></div>
-                  <div class="dash-project"><div><strong>Distributed File Storage</strong><small>Containerized storage architecture</small></div><span>SYSTEMS</span></div>
-                  <div class="dash-project"><div><strong>Notts Events</strong><small>Booking and capacity management</small></div><span>WEB APP</span></div>
+                  <a class="dash-project dash-project-link" href="https://github.com/jagtappranit30/productive-point" target="_blank" rel="noreferrer"><div><strong>Productive Point AI</strong><small>Private AI productivity assessment</small></div><span>AI / RAG ↗</span></a>
+                  <a class="dash-project dash-project-link" href="https://github.com/jagtappranit30/cwk-soft40051" target="_blank" rel="noreferrer"><div><strong>Distributed File Storage</strong><small>Containerized storage architecture</small></div><span>SYSTEMS ↗</span></a>
+                  <a class="dash-project dash-project-link" href="https://github.com/jagtappranit30/soct-cwk" target="_blank" rel="noreferrer"><div><strong>Notts Events</strong><small>Booking and capacity management</small></div><span>WEB APP ↗</span></a>
                 </div>
               </div>
             </div>
@@ -833,22 +837,22 @@
             </div>
           </div>
           <div class="projects-grid stagger">
-            <article class="project-card" data-category="ai">
+            <a class="project-card" data-category="ai" href="https://github.com/jagtappranit30/productive-point" target="_blank" rel="noreferrer" aria-label="Open Productive Point AI GitHub repository">
               <div class="project-art art-ai" aria-hidden="true"></div>
               <div class="project-copy"><span class="project-category">AI · Research</span><h3>Productive Point AI</h3><p>Document-grounded SME assessment with local inference and deterministic scoring.</p><div class="project-footer"><span>RAG · Qwen · Ollama</span><span class="arrow">↗</span></div></div>
-            </article>
-            <article class="project-card" data-category="systems">
+            </a>
+            <a class="project-card" data-category="systems" href="https://github.com/jagtappranit30/cwk-soft40051" target="_blank" rel="noreferrer" aria-label="Open Distributed File Storage GitHub repository">
               <div class="project-art art-storage" aria-hidden="true"><div class="storage-cube"></div></div>
               <div class="project-copy"><span class="project-category">Distributed systems</span><h3>Distributed File Storage</h3><p>A secure storage architecture built around containerized services and message passing.</p><div class="project-footer"><span>Docker · MQTT · SQL</span><span class="arrow">↗</span></div></div>
-            </article>
-            <article class="project-card" data-category="web">
+            </a>
+            <a class="project-card" data-category="web" href="https://github.com/jagtappranit30/soct-cwk" target="_blank" rel="noreferrer" aria-label="Open Notts Events GitHub repository">
               <div class="project-art art-events" aria-hidden="true"><div class="event-orbit"></div><div class="event-ticket">✦</div></div>
               <div class="project-copy"><span class="project-category">Web application</span><h3>Notts Events</h3><p>Containerized event booking with registration, capacity management, and booking logic.</p><div class="project-footer"><span>Web · Containers · Booking</span><span class="arrow">↗</span></div></div>
-            </article>
-            <article class="project-card" data-category="systems">
+            </a>
+            <a class="project-card" data-category="systems" href="https://github.com/jagtappranit30/pranit-jagtap-portfolio" target="_blank" rel="noreferrer" aria-label="Open cloud-native portfolio GitHub repository">
               <div class="project-art art-terminal" aria-hidden="true"><div class="terminal-card"><div class="terminal-top"><i></i><i></i><i></i></div><div class="terminal-line"></div><div class="terminal-line"></div><div class="terminal-line"></div><div class="terminal-line"></div></div></div>
               <div class="project-copy"><span class="project-category">Cloud · Infrastructure</span><h3>Cloud-native foundations</h3><p>Practical infrastructure patterns focused on reliability, deployment, and clear operations.</p><div class="project-footer"><span>Linux · Docker · CI/CD</span><span class="arrow">↗</span></div></div>
-            </article>
+            </a>
           </div>
         </div>
       </section>
